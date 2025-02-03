@@ -10,15 +10,12 @@ namespace OOPExam.QuestionTypes
     {
         public TrueFalseQuestion(string header, string body, int mark):base(header, body,mark)
         {
-            showQuestion();
-        }
-        public override void showQuestion()
-        {
             AnswerList = new Answers[]
             {
-                new Answers(1,"True"),
-                new Answers(2,"False"),
+                new Answers(1, "True"),
+                new Answers(2, "False")
             };
         }
+
     }
 }

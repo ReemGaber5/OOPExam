@@ -22,6 +22,5 @@ namespace OOPExam
             Mark = mark;
         }
 
-        public abstract void showQuestion();
     }
 }

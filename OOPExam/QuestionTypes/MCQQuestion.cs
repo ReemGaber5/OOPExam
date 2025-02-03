@@ -10,17 +10,22 @@ namespace OOPExam.QuestionTypes
     {
         public MCQQuestion(string header, string body, int mark) : base(header, body, mark)
         {
-            showQuestion();
-        }
-
-        public override void showQuestion()
-        {
             AnswerList = new Answers[4];
-            for(int i = 0;i< AnswerList.Length;i++)
-            {
-                AnswerList[i]=new Answers(i+1,$"text{i+1}");
-            }
            
         }
+
+        public void AddAnswers(string[] answers)
+        {
+            if(answers.Length!=4)
+            {
+                throw new Exception("you must have 4 answers for mcq questions");
+            }
+            for (int i = 0; i <4; i++)
+            {
+                AnswerList[i] = new Answers(i + 1, answers[i]);
+            }
+        }
+
+       
     }
 }
